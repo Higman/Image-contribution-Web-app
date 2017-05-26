@@ -54,3 +54,4 @@ gem 'slim-rails'
 gem 'html2slim'
 
 gem 'rspec-rails', '~> 3.0', group: [:development, :test]
+gem 'rails-controller-testing'
