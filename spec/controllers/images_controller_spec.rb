@@ -7,5 +7,12 @@ RSpec.describe ImagesController, type: :controller do
       expect(assigns(:images)).to_not be_nil
     end
   end
+
+  describe "#new" do 
+    it "assigns @image" do
+      get :new
+      expect(assigns(:image)).to_not be_nil
+    end
+  end
 end
 
