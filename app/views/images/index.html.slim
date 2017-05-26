@@ -1,6 +1,12 @@
 h1 
   画像一覧
+
+d1
+  = link_to "画像を投稿する", new_image_path
+
 d1
   - @images.each do |image|
     dt= image.title
-    dd=image_tag image.url
+    dd
+      = link_to image do
+        = image_tag image.url
