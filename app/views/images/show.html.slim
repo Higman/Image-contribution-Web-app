@@ -4,3 +4,13 @@ dl
   = image_tag @image.url
 br
   = link_to "削除", @image, method: :delete
+
+h2 コメント
+u1 
+  - @image.comments.each do |comment|
+    ll
+      = comment.body
+
+  = form_for [@image, Comment.new] do |f|
+    = f.text_field :body
+    = f.submit 
